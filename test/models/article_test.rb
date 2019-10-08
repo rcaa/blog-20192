@@ -6,4 +6,9 @@ class ArticleTest < ActiveSupport::TestCase
     article = Article.new
     assert_not article.save
   end
+
+  test 'should save article with correct title' do
+    article = Article.new title: 'Ruby is awesome'
+    assert article.save
+  end
 end
