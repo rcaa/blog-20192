@@ -1,6 +1,6 @@
 # README
 
-*heroku link: https://esmonitoria.herokuapp.com/
+* heroku link: https://esmonitoria.herokuapp.com/
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
