@@ -1,5 +1,18 @@
 <h1>Listing articles</h1>
-<%= link_to 'New article', new_article_path %>
+
+<table>
+  <tr>
+    <td><%= link_to 'New article', new_article_path %></td>
+  </tr>
+  <tr>
+    <td>
+      <%= form_tag(articles_path(), :method => :get ) do %>
+        <%= text_field_tag'search', nil, placeholder:'Enter search article title'%>
+        <%= submit_tag "Search article"%>
+      <% end %></td>
+  </tr>
+</table>
+
 <table>
   <tr>
     <th>Title</th>
