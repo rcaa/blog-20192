@@ -1,7 +1,12 @@
 class ArticlesController < ApplicationController
 
   def index
-    @articles = Article.all
+    if params[:search]
+      @articles = Article.where(title: params[:search])
+    else
+      @articles = Article.all
+    end
+
   end
 
   def show
@@ -41,6 +46,10 @@ class ArticlesController < ApplicationController
     @article.destroy
 
     redirect_to articles_path
+  end
+
+  def search
+    @article = Article.where('title = ?', params[:q])
   end
 
   private
